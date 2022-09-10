@@ -281,12 +281,17 @@ body {
   background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
 }
 .card-tour:hover .card-tour__side_front {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .card-tour:hover .card-tour__side_back {
   transform: rotateY(0deg);
 }
-
+.card-tour__img {
+  background-blend-mode: hard-light;
+  height: 20rem;
+  background: #BA8554 url("../img/card-1.jpg") center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 80%);
+}
 .row {
   max-width: 114rem;
   margin: 0 auto;
