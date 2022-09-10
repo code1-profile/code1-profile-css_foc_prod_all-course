@@ -3,6 +3,7 @@
 	perspective: 150rem //на глаз
 	-moz-perspective: 150rem //mazila firefox
 	position: relative
+
 	&__side
 		height: 50rem
 		transition: .7s all ease-out //easy для плавности
@@ -11,9 +12,9 @@
 		top:0
 		left: 0
 		width: 100%
+		box-shadow: $box-shadow
 		backface-visibility: hidden //чтобы не было глюков, просветов
 		&_front
-			background: yellow
 		&_back
 			background: green
 			transform: rotateY(180deg)
@@ -24,8 +25,39 @@
 		transform: rotateY(0deg)
 	&__img
 		background-blend-mode: hard-light
-		height: 20rem
+		height: 21rem
 		background: $color-brown_lite url('../img/card-1.jpg') center / cover no-repeat
 		clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 80%)
 	&__title
+		font-size: 2.8rem
+		letter-spacing: .2rem
+		font-weight: 300
+		text-transform: uppercase
+		position: absolute
+		top: 17rem
+		right: 0
+	&__span
+		background: linear-gradient(90deg, $color-brown_lite, $color-brown-dark)
+		padding: 1rem 2rem .3rem 2rem
+		&_1
+		&_2
+			position: absolute
+			top: 3.4rem
+			right: 0
+			padding-bottom: 1rem
+			padding-rop: 0
 	&__descr
+		ul
+			width: 75%
+			list-style: none
+			margin: 0 auto
+			li
+				font-size: $font-size-paragraph
+				letter-spacing: .2rem
+				color: $color-gray
+				border-bottom: .1rem solid $color-gray
+				text-align: center
+				&:not(:last-child)
+					margin-bottom: 2rem
+
+		
