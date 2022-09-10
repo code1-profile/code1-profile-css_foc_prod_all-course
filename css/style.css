@@ -256,6 +256,37 @@ body {
   color: transparent;
 }
 
+.card-tour {
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+.card-tour__side {
+  height: 50rem;
+  transition: 0.7s all ease-out;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.card-tour__side_front {
+  background: yellow;
+}
+.card-tour__side_back {
+  background: green;
+  transform: rotateY(180deg);
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -333,4 +364,8 @@ body {
 }
 .section-adventure > * {
   transform: skewY(-7deg);
+}
+
+.section-tour {
+  padding-top: 21rem;
 }
