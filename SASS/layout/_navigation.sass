@@ -1,25 +1,26 @@
 .navigation
 	&__toggle
 		display: none
-
-
 	&__button
 		background: $color-white
-		width: 9rem
-		height: 9rem
+		width: 8rem
+		height: 8rem
 		border-radius:50%
 		position: fixed
-		top: 6rem
-		right: 7rem
+		top: 10rem
+		right: 10rem
 		z-index: 200
+		text-align: center
+		cursor: pointer
+		box-shadow: $box-shadow
 	&__background
-		width: 7rem
-		height: 7rem
+		width: 6rem
+		height: 6rem
 		border-radius: 50%
 		background: radial-gradient($color-brown-lite,$color-brown-dark)
 		position: fixed
-		top: 8rem
-		right: 8rem
+		top: 11rem
+		right: 11rem
 		z-index: 100
 		transition: all .7s
 	&__nav
@@ -63,3 +64,41 @@
 	&__toggle:checked ~ &__nav
 		width: 100%
 		opacity: 1
+
+	&__icon
+		position: relative
+		margin-top:38px
+		&,
+		&::before,
+		&::after
+			width: 30px
+			height: 2px
+			background: $color-black
+			display: inline-block
+		&::before,
+		&::after
+			content: ""
+			position: absolute
+			left: 0
+			transition: all .2s
+		&::before
+			top:-8px	
+		&::after
+			top:8px	
+	
+	&__button:hover &__icon::before
+		top: -10px
+	
+	&__button:hover &__icon::after
+		top: 10px	
+
+	&__toggle:checked + &__button &__icon
+		background: transparent
+		
+	&__toggle:checked + &__button &__icon::before
+		top:0
+		transform: rotate(135deg)
+	&__toggle:checked + &__button &__icon::after
+		top:0
+		transform: rotate(-135deg)
+		
