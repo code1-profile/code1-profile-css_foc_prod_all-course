@@ -3,9 +3,13 @@
 	margin: 0 auto 
 	&:not(:last-child) 
 		margin-bottom: $margin-vertical-big
+		@include respond(tab-port)
+			margin-bottom: 3rem
 	@include clearfix
 	@include respond(tab-land)
 		max-width: 90.1rem
+	@include respond(tab-port)
+		max-width: 60rem
 
 .col-1-of-2
 	width: calc( ( 100% - #{$gutter-horizont} ) / 2)
@@ -39,3 +43,7 @@
 	@include respond(tab-land)
 		&:not(:last-child) 
 			margin-right: 2rem
+	@include respond(tab-port)
+		width: 100%
+		margin-right: 0 !important
+		margin-bottom: 4rem
