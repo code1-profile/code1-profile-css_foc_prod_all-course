@@ -363,7 +363,7 @@ body {
 }
 @media (max-width: 900px) {
   .card-tour {
-    height: 60rem;
+    height: auto;
   }
 }
 .card-tour__side {
@@ -381,7 +381,13 @@ body {
 }
 @media (max-width: 900px) {
   .card-tour__side {
-    height: 60rem;
+    height: auto;
+    position: relative;
+  }
+}
+@media (max-width: 900px) {
+  .card-tour__side_front {
+    padding-bottom: 13rem;
   }
 }
 .card-tour__side_back {
@@ -389,8 +395,22 @@ body {
   transform: rotateY(180deg);
   background: linear-gradient(120deg, #BA8554, #A14F03);
 }
+@media (max-width: 900px) {
+  .card-tour__side_back {
+    transform: rotateY(0deg);
+    margin-top: -11rem;
+    padding: 12rem 5rem 5rem;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+    text-align: center;
+  }
+}
 .card-tour:hover .card-tour__side_front {
   transform: rotateY(-180deg);
+}
+@media (max-width: 900px) {
+  .card-tour:hover .card-tour__side_front {
+    transform: rotateY(0deg);
+  }
 }
 .card-tour:hover .card-tour__side_back {
   transform: rotateY(0deg);
@@ -399,6 +419,11 @@ body {
   background-blend-mode: hard-light;
   height: 21rem;
   clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 80%);
+}
+@media (max-width: 900px) {
+  .card-tour__img {
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 70%);
+  }
 }
 .card-tour__img_1 {
   background: #BA8554 url("../img/card-1.jpg") center/cover no-repeat;
@@ -476,6 +501,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 900px) {
+  .card-tour__backSide-box {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
 }
 .card-tour__text {
   margin-bottom: 8rem;
@@ -843,7 +876,8 @@ body {
 }
 @media (max-width: 1240px) {
   .footer__item {
-    margin: 0 3rem 3rem 0;
+    margin: 0;
+    padding: 2rem;
   }
 }
 .footer__link:link, .footer__link:visited {
@@ -1020,4 +1054,10 @@ body {
 .section-book {
   padding: 10rem;
   background: linear-gradient(90deg, #BA8554, #A14F03);
+}
+@media (max-width: 900px) {
+  .section-book {
+    height: auto;
+    padding-bottom: 4rem;
+  }
 }
